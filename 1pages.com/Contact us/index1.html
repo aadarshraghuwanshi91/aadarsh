@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style1.css" />
+    <script
+      src="aadarsh.studio"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <span class="big-circle"></span>
+      <img src="img/shape.png" class="square" alt="" />
+      <div class="form">
+        <div class="contact-info">
+          <h3 class="title">Let's get in touch</h3>
+          <p class="text">
+            For any problem you can contact us 24/7 we are available 24/7 just to help you we will be happy to help you.
+          </p>
+
+          <div class="info">
+            <div class="information">
+              <img src="img/location.png" class="icon" alt="" />
+              <p>Rajeev Gandhi Nagar Bhopal Madhya Pradesh 462022</p>
+            </div>
+            <div class="information">
+              <img src="img/email.png" class="icon" alt="" />
+              <p>aadarshraghuwanshi91@gmail.com</p>
+            </div>
+            <div class="information">
+              <img src="img/phone.png" class="icon" alt="" />
+              <p>+916265578362</p>
+            </div>
+          </div>
+
+          <div class="social-media">
+            <p>Connect with us :</p>
+            <div class="social-icons">
+              <a  href="https://www.instagram.com/aadarsh_raghuwanshi_/" class="video-open playbtn">
+                <img src="img/instagram.png" class="icon" alt="" />
+              </a>
+              <a href="https://twitter.com/aadarsh_patel_" class="video-open playbtn">
+                <img src="img/twitter.png" class="icon" alt="" />
+             </a>
+              <a href="https://youtube.com/channel/UCw5sxPIdw2lSoExHGbYvQVg" class="video-open playbtn">
+                <img src="img/youtube.png" class="icon" alt="" />
+              </a>
+              <a href="https://www.linkedin.com/in/aadarsh-raghuwanshi-bb3347243" class="video-open playbtn">
+                <img src="img/linkedine.png" class="icon" alt="" />
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=100082304961534" class="video-open playbtn">
+                <img src="img/Facebook.png" class="icon" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <span class="circle one"></span>
+          <span class="circle two"></span>
+
+          <form onsubmit="sendEmail(); reset(); return false;" action="index.html" autocomplete="off">
+            <h3 class="title">Contact us</h3>
+            <div class="input-container">
+              <input type="text" name="name" class="input" />
+              <label for="">Full Name</label>
+              <span>Full Name</span>
+            </div>
+            <div class="input-container">
+              <input type="email" name="email" class="input" />
+              <label for="">Email id</Address></label>
+              <span>Email id</span>
+            </div>
+            <div class="input-container">
+              <input type="tel" name="phone" class="input" />
+              <label for="">Phone no</label>
+              <span>Phone no</span>
+            </div>
+            <div class="input-container textarea">
+              <textarea name="message" class="input"></textarea>
+              <label for="">Message</label>
+              <span>Message</span>
+            </div>
+            <input type="submit" value="Send" class="btn" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host : "smtp.elasticemail.com",
+                Username : "support@aadarsh.studio",
+                Password : "8D8C9A1CC371E21DE2FD2802870433316A9C",
+                To : 'support@aadarsh.studio',
+                From : "you@isp.com",
+                Subject : "new contact Form enquiry",
+                Body : "And this is the body"
+            }).then(
+            message => alert(message)
+            );
+        }
+    </script>
+  </body>
+</html>
